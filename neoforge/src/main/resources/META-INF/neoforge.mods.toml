@@ -6,10 +6,10 @@ license = "GPL-3.0"
 [[mods]]
 modId = "durability_tweaks"
 version = "${version}"
-displayName = "Enchant Limiter"
+displayName = "Durability Tweaks"
 authors = "Daedelus"
 description = '''
-Limit the number of enchantments on an item.
+Changes durability loss on equipment.
 '''
 logoFile = "icon.png"
 

@@ -1,6 +1,6 @@
-# Enchant Limiter
+# Durability Tweaks
 
-Limit the number of enchantments on an item.
+Changes durability loss on equipment.
 
 Automatically applies limit to all breakable items and enchanted books by default.
 
