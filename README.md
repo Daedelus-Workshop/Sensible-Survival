@@ -1,19 +1,19 @@
 # Durability Tweaks
 
+Server side mod.
+
 Changes durability loss on equipment.
 
-Automatically applies limit to all breakable items and enchanted books by default.
+## Features
 
-## Item component
-
-Enchantment limit is based on a new item component: `durability_tweaks:limit` 
-
-Example command
-```
-/give @p minecraft:golden_sword[durability_tweaks:limit={"count":3}]
-```
+- Armor durability loss chance
+- Armor durability loss cap
+- Armor durability loss multiplier
+- Shield durability loss chance 
+- Shield damage durability loss cap
+- Shield damage durability loss multiplier
 
 ## Configuration
 
-- Adjustable default enchantment limit (default: 3)
+Config file is located in `config/durability_tweaks.json`.
 
