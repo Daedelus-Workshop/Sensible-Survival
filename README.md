@@ -2,7 +2,7 @@
 
 Server side mod.
 
-Changes durability loss on equipment.
+Reduces durability loss of equipment.
 
 ## Features
 
