@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "durability_tweaks",
+  "version": "${version}",
+  "name": "Enchant Limiter",
+  "description": "Limit the number of enchantments on an item.",
+  "authors": [
+    "Daedelus"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "GPL-3.0",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.durability_tweaks.fabric.FabricMod"
+    ],
+    "client": [
+      "net.durability_tweaks.fabric.client.FabricClientMod"
+    ]
+  },
+  "mixins": [
+    "durability_tweaks.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
