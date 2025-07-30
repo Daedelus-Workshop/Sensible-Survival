@@ -17,7 +17,11 @@ import java.util.Random;
 public class PlayerEntityMixin {
     @Unique
     private static final Random DURABILITY_RNG = new Random();
-    @WrapOperation(method = "damageShield", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Lnet/minecraft/entity/EquipmentSlot;)V"))
+    @WrapOperation(
+            method = "damageShield",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Lnet/minecraft/entity/EquipmentSlot;)V"),
+            require = 0 // Funnily NeoForge rewrites the whole function, so the target funciton wont be found, ggwp
+    )
     private void damageShield_damageStack(ItemStack instance, int amount, LivingEntity entity, EquipmentSlot slot, Operation<Void> original) {
         var config = DurabilityTweaksMod.getConfig();
         if (config.shield_takes_damage_chance < 1F
