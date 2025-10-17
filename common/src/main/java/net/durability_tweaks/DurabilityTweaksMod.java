@@ -1,7 +1,7 @@
 package net.durability_tweaks;
 
 import net.durability_tweaks.config.Config;
-import net.tinyconfig.ConfigManager;
+import net.tiny_config.ConfigManager;
 
 public final class DurabilityTweaksMod {
     public static final String ID = "durability_tweaks";
