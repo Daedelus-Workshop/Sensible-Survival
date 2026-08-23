@@ -1,4 +1,4 @@
-package net.durability_tweaks.fabric.client;
+package net.sensible_survival.fabric.client;
 
 import net.fabricmc.api.ClientModInitializer;
 

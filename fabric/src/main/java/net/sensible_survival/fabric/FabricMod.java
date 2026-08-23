@@ -1,8 +1,8 @@
-package net.durability_tweaks.fabric;
+package net.sensible_survival.fabric;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.durability_tweaks.DurabilityTweaksMod;
+import net.sensible_survival.SensibleSurvivalMod;
 
 public final class FabricMod implements ModInitializer {
     @Override
@@ -12,6 +12,6 @@ public final class FabricMod implements ModInitializer {
         // Proceed with mild caution.
 
         // Run our common setup.
-        DurabilityTweaksMod.init();
+        SensibleSurvivalMod.init();
     }
 }

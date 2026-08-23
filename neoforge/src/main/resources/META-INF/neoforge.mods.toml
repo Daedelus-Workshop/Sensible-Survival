@@ -1,26 +1,26 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
-#issueTrackerURL = ""
+issueTrackerURL = "https://github.com/ZsoltMolnarrr/Sensible-Survival/issues"
 license = "GPL-3.0"
 
 [[mods]]
-modId = "durability_tweaks"
+modId = "sensible_survival"
 version = "${version}"
-displayName = "Durability Tweaks"
+displayName = "Sensible Survival"
 authors = "Daedelus"
 description = '''
-Changes durability loss on equipment.
+A collection of sensible survival gameplay tweaks and fixes.
 '''
 logoFile = "icon.png"
 
-[[dependencies.durability_tweaks]]
+[[dependencies.sensible_survival]]
 modId = "neoforge"
 type = "required"
 versionRange = "[21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.durability_tweaks]]
+[[dependencies.sensible_survival]]
 modId = "minecraft"
 type = "required"
 versionRange = "[1.21.1,)"
@@ -28,4 +28,4 @@ ordering = "NONE"
 side = "BOTH"
 
 [[mixins]]
-config = "durability_tweaks.mixins.json"
+config = "sensible_survival.mixins.json"

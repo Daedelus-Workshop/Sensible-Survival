@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "package": "net.sensible_survival.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+    "client.ClientPlayerEntityMixin",
+    "client.AnvilScreenMixin"
+  ],
+  "mixins": [
+    "AnvilScreenHandlerMixin",
+    "ExperienceOrbEntityMixin",
+    "LivingEntityMixin",
+    "PlacedFeatureMixin",
+    "PlayerEntityMixin",
+    "SinglePoolElementAccessor",
+    "StructurePoolMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

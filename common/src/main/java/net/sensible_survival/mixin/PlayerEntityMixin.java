@@ -1,8 +1,8 @@
-package net.durability_tweaks.mixin;
+package net.sensible_survival.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import net.durability_tweaks.DurabilityTweaksMod;
+import net.sensible_survival.SensibleSurvivalMod;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,7 +23,7 @@ public class PlayerEntityMixin {
             require = 0 // Funnily NeoForge rewrites the whole function, so the target funciton wont be found, ggwp
     )
     private void damageShield_damageStack(ItemStack instance, int amount, LivingEntity entity, EquipmentSlot slot, Operation<Void> original) {
-        var config = DurabilityTweaksMod.getConfig();
+        var config = SensibleSurvivalMod.getConfig();
         if (config.shield_takes_damage_chance < 1F
                 && DURABILITY_RNG.nextFloat() > config.shield_takes_damage_chance) {
             amount = 0;

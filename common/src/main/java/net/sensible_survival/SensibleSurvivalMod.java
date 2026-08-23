@@ -1,13 +1,15 @@
-package net.durability_tweaks;
+package net.sensible_survival;
 
-import net.durability_tweaks.config.Config;
+import net.sensible_survival.compat.CompatFeatures;
+import net.sensible_survival.config.Config;
+import net.sensible_survival.config.ConfigMigration;
 import net.tiny_config.ConfigManager;
 
-public final class DurabilityTweaksMod {
-    public static final String ID = "durability_tweaks";
+public final class SensibleSurvivalMod {
+    public static final String ID = "sensible_survival";
 
     private static ConfigManager<Config> config = new ConfigManager<>
-            ("durability_tweaks", new Config())
+            (ID, new Config())
             .builder()
             // .setDirectory(ID)
             .sanitize(true)
@@ -16,6 +18,7 @@ public final class DurabilityTweaksMod {
     private static boolean initialized = false;
     public static Config getConfig() {
         if (!initialized) {
+            ConfigMigration.migrateLegacyConfig(ID);
             config.refresh();
             initialized = true;
         }
@@ -24,5 +27,6 @@ public final class DurabilityTweaksMod {
 
     public static void init() {
         getConfig();
+        CompatFeatures.initialize();
     }
 }

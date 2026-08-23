@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'durability_tweaks'
+rootProject.name = 'sensible_survival'
 
 include 'common'
 include 'fabric'

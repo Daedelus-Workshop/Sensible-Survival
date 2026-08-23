@@ -28,6 +28,25 @@ configurations {
 }
 
 repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = "https://maven.ftb.dev/releases"
+            }
+        }
+        filter {
+            includeGroup"dev.latvian.mods"
+            includeGroup"dev.ftb.mods"
+        }
+    }
+    // JEI Maven currently required by FTB
+    maven {
+        name "ModMaven (JEI)"
+        url "https://modmaven.dev/"
+        content {
+            includeGroup "mezz.jei"
+        }
+    }
     maven {
         name = 'NeoForged'
         url = 'https://maven.neoforged.net/releases'
@@ -48,6 +67,11 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 
     include(modImplementation("maven.modrinth:tiny-config:${project.tiny_config_version}-${platform}"))
+
+    // Optional integration: compiled against, never bundled or required at runtime.
+    modCompileOnly("dev.ftb.mods:ftb-teams-${platform}:${project.ftb_teams_version}")
+    modCompileOnly("dev.ftb.mods:ftb-library-${platform}:${project.ftb_library_version}")
+
 }
 
 processResources {
