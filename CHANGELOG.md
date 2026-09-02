@@ -1,3 +1,7 @@
+# 1.1.1
+
+- Update icon
+
 # 1.1.0
 
 - Renamed to Sensible Survival, the mod now covers more than durability
