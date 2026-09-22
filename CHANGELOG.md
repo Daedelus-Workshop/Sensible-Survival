@@ -1,3 +1,8 @@
+# 1.1.2
+
+- Experience sharing accepts teammates from any team system, instead of stopping at the first one to answer
+- Fixed: experience no longer shared with strangers on servers using free-to-join FTB teams
+
 # 1.1.1
 
 - Update icon
